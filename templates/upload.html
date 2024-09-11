@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload File</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 50px;
+        }
+        .container {
+            max-width: 500px;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        h2 {
+            text-align: center;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .custom-file-upload {
+            display: inline-block;
+            padding: 10px 20px;
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: white;
+            border-radius: 5px;
+            font-size: 15px; 
+            text-align: center;
+            margin-bottom: 15px;  
+        }
+        input[type="file"] {
+            display: none;
+        }
+        input[type="submit"] {
+            background-color: red;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px;
+            width: 50%;
+            cursor: pointer;
+            text-align: center;
+            font-size: 15px; 
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+            
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Upload Excel File</h2>
+        
+        <form action="/uploader" method="post" enctype="multipart/form-data">
+            <label class="custom-file-upload">
+                Выберите файл
+                <input type="file" name="file" accept=".xlsx">
+            </label>
+            <input type="submit" value="Upload">
+        </form>
+    </div>
+</body>
+</html>
